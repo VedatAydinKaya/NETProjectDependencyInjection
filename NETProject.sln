@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.10.34928.147
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DependcyInjection", "DependcyInjection\DependcyInjection.csproj", "{DCAF019B-0BFA-4698-9614-7B5CFBDEA439}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DependcyInjection", "DependcyInjection\DependcyInjection.csproj", "{DCAF019B-0BFA-4698-9614-7B5CFBDEA439}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Middleware", "Middleware\Middleware.csproj", "{3A02E945-89A8-455C-8ECA-053158ACC08D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{DCAF019B-0BFA-4698-9614-7B5CFBDEA439}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DCAF019B-0BFA-4698-9614-7B5CFBDEA439}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DCAF019B-0BFA-4698-9614-7B5CFBDEA439}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3A02E945-89A8-455C-8ECA-053158ACC08D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3A02E945-89A8-455C-8ECA-053158ACC08D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3A02E945-89A8-455C-8ECA-053158ACC08D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3A02E945-89A8-455C-8ECA-053158ACC08D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
