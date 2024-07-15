@@ -1,4 +1,8 @@
 using Microsoft.AspNetCore.Mvc;
+using Newtonsoft.Json;
+using System.Text.Json;
+
+
 
 namespace Middleware.Controllers
 {
@@ -13,10 +17,47 @@ namespace Middleware.Controllers
 
             return "Ok";
         }
+
+        [HttpPost("saveCar")]
+        public IActionResult SaveRequest(Car Car)
+        {
+            //throw new Exception("Hata test");
+
+          //  Retrieve data and return as JSON
+
+            return new JsonResult(Car)
+            {
+                ContentType = "application/json",
+                SerializerSettings = JsonSerializerOptions.Default,
+                StatusCode = 200,
+                Value = Car
+            };
+
+            //return $"Car successfully saved CarReferenceTransactionId: {new Random().Next(199,250)} ";
+        }
     }
 
-    public class Number {
 
-        public int theBiggestNumber { get; set; }
+    public class Car
+    {
+        [JsonProperty(PropertyName = "Maker", Required = Required.AllowNull)]
+        public string Maker { get; set; }
+
+        [JsonProperty(PropertyName = "Model", Required = Required.Always)]
+        public string Model { get; set; }
+       
+        [JsonProperty(PropertyName = "Color", Required = Required.Always)]
+        public string Color { get; set; }
+
+        [JsonProperty(PropertyName = "Price", Required = Required.Always)]
+        public decimal Price { get; set; }
+
+        [JsonProperty(PropertyName = "Year", Required = Required.Always)]
+        public string Year { get; set; }
+
+
+
     }
+
+
 }
