@@ -18,8 +18,25 @@ namespace Middleware.Controllers
             return "Ok";
         }
 
+
+        [HttpGet("Car")]
+        public Car GetCar()
+        {
+            Car car=new Car();
+
+            return new Car {
+
+                Maker = "Ford",
+                Model = "Focus",
+                Color = "Red",
+                Price = 100,
+                Year = "2025"
+            };
+
+        }
+
         [HttpPost("saveCar")]
-        public IActionResult SaveRequest(Car Car)
+        public IActionResult SaveCar([FromBody]Car Car)
         {
             //throw new Exception("Hata test");
 
