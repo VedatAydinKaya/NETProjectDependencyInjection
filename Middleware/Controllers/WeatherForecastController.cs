@@ -22,7 +22,7 @@ namespace Middleware.Controllers
         [HttpGet("Car")]
         public Car GetCar()
         {
-            Car car=new Car();
+            //Car car=new Car();
 
             return new Car {
 
